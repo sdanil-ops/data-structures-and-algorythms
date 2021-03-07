@@ -1,9 +1,17 @@
 #  Copyright (c) 2021. Danil Smirnov
 #  zabanen.nu@ya.ru
 
-def bubble_sort(usnsorted_list):
+def bubble_sort(unsorted_list):
     """sort list by bubble sort method"""
-    pass
+    swaps = True
+    quantity_elements = len(unsorted_list)
+    while swaps:
+        swaps = False
+        for bypass in range(1, quantity_elements):
+            for k in range(0, quantity_elements - bypass):
+                if unsorted_list[k] > unsorted_list[k + 1]:
+                    swaps = True
+                    unsorted_list[k], unsorted_list[k + 1] = unsorted_list[k + 1], unsorted_list[k]
 
 def insertion_sort(usnsorted_list):
     """sort list by insertion sort method"""
