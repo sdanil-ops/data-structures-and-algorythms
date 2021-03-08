@@ -26,7 +26,11 @@ def insertion_sort(unsorted_list):
 
 def selection_sort(unsorted_list):
     """sort list by selection sort method"""
-    pass
+    quantity_elements = len(unsorted_list)
+    for pos in range(quantity_elements - 1):
+        for k in range(pos + 1, quantity_elements):
+            if unsorted_list[k] < unsorted_list[pos]:
+                unsorted_list[k], unsorted_list[pos] = unsorted_list[pos], unsorted_list[k]
 
 
 def test_sort(sort_algorythm):
