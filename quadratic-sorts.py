@@ -13,11 +13,18 @@ def bubble_sort(unsorted_list):
                     swaps = True
                     unsorted_list[k], unsorted_list[k + 1] = unsorted_list[k + 1], unsorted_list[k]
 
-def insertion_sort(usnsorted_list):
-    """sort list by insertion sort method"""
-    pass
 
-def selection_sort(usnsorted_list):
+def insertion_sort(unsorted_list):
+    """sort list by insertion sort method"""
+    quantity_elements = len(unsorted_list)
+    for top in range(1, quantity_elements):
+        k = top  # k - processed item
+        while k > 0 and unsorted_list[k - 1] > unsorted_list[k]:  # prevents out of bounce
+            unsorted_list[k], unsorted_list[k - 1] = unsorted_list[k - 1], unsorted_list[k]
+            k -= 1
+
+
+def selection_sort(unsorted_list):
     """sort list by selection sort method"""
     pass
 
@@ -47,6 +54,7 @@ def test_sort(sort_algorythm):
     sorted_list = list(range(1, 21))
     sort_algorythm(unsorted_list)
     print("Passed" if sorted_list == unsorted_list else "Failed")
+
 
 if __name__ == "__main__":
     test_sort(bubble_sort)
