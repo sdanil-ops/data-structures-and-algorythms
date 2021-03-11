@@ -1,5 +1,9 @@
+#  -----------------------------------------------------------
+#  simple demonstration of quadratic sorts work
 #  Copyright (c) 2021. Danil Smirnov
-#  zabanen.nu@ya.ru
+#  Released under GNU Public License (GPL)
+#  email zabanen.nu@ya.ru
+#  -----------------------------------------------------------
 
 def bubble_sort(unsorted_list):
     """sort list by bubble sort method"""
